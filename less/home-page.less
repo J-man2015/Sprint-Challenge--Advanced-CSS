@@ -1,19 +1,30 @@
 // Home Content
 
 .home {
-
+ color:@shuttle-gray;
+ border-color: @border-real;
   .intro {
-
+    
     h2 {
       padding: 15px;
     }
 
     p {
       padding:0 15px;
+      font-size: 2rem;
+    }
+    color:@ebony-clay;
+    img{
+      border-radius: 8px;
+      width:100%;
+    }
+  }
+  
+   
+    img{
+      border-radius: 8px;
     }
   
-  }
-
   .space-images {
     display: flex;
     flex-wrap: wrap;
@@ -36,6 +47,7 @@
 
     p {
       margin-top: 13px;
+      font-size: 2rem;
     }
   }
 
@@ -55,9 +67,19 @@
 
       p {
         margin-bottom: 26px;
+        font-size: 2rem;
       }
 
       .btn {
+        .buttonmixin(@btn-bg-color, white);
+        padding:8px 20px;
+        border-radius: 8px;
+        font-size:2rem;
+      }
+      button:hover{
+        background-color:lightblue;
+        color:lavenderblush;
+      }
       }
     }
 
@@ -71,5 +93,53 @@
         border-radius: 10px;
       }
     }
+    footer{
+      background-color: @wild-sand;
+      color:@waterloo;
+      p{
+        font-size: 1.7rem;
+    }
   }
-}// home
+  @media @phone{
+    nav a{
+      .fontsize15();
+    }
+
+    .space-images{
+      img{
+        width:100%;
+      }
+      .sky{
+        display: none;
+      }
+      .launch{
+        display:none;
+      }
+  }
+  .walk{
+    // border:2px solid blue;
+    display:flex;
+    flex-direction:column-reverse;
+    flex-wrap: wrap;
+    padding: 10px;
+    .walk-img{
+      // border:1px solid red;
+      width:100%;
+      margin-left: -1px;
+    }
+    .walk-text{
+      width:100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    div{
+      width:100%;
+      // border:1px solid red;
+    }
+    .btn{
+      width:100%;
+    }
+  }
+}
+}
+// home
